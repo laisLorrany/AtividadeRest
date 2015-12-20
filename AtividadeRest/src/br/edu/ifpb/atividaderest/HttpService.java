@@ -13,9 +13,9 @@ import android.util.Log;
 public class HttpService {
 
     // IP da máquina onde se encontra o servidor.
-    private static final String URL_CONTEXT = "http://186.212.143.195:8080/rest-servlet-service/";
+    private static final String URL_CONTEXT = "http://186.212.143.195:8080/ServicoRest/";
 
-    public static HttpURLConnection sendGetRequest(String service)
+    public static HttpURLConnection sendPostRequest(String service)
             throws MalformedURLException, IOException{
 
         HttpURLConnection connection = null;
