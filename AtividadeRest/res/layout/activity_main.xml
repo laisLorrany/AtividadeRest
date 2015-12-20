@@ -4,26 +4,25 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/nomeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName" >
 
-        <requestFocus />
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/senhaEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/enviarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@strings/enviarButton" />
 
 </LinearLayout>
