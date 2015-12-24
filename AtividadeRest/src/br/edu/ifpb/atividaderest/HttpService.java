@@ -13,7 +13,7 @@ import android.util.Log;
 public class HttpService {
 
     // IP da máquina onde se encontra o servidor.
-    private static final String URL_CONTEXT = "http://186.212.143.195:8080/ServicoRest/";
+    private static final String URL_CONTEXT = "http://192.168.56.1:8080/rest-servlet-service/";
 
     public static HttpURLConnection sendPostRequest(String service)
             throws MalformedURLException, IOException{
@@ -26,14 +26,15 @@ public class HttpService {
 
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
-            connection.setConnectTimeout(10000);
-            connection.setReadTimeout(15000);
             connection.connect();
 
-        } finally {
+        } catch (Exception e){
+        	System.out.println("HttpService: " + e.getMessage());
+        }/*finally {
+        }
 
             connection.disconnect();
-        }
+        }*/
 
         return connection;
     }
